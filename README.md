@@ -29,3 +29,6 @@
 
 ## translations example
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-translations?file=package.json)
+
+## unsaved changes example
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-unsaved-changes?file=package.json)
