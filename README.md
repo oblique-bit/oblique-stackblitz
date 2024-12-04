@@ -23,3 +23,6 @@
 
 ## unknown route example
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-oblique-unknown-route-example?file=package.json)
+
+## off-canvas example
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-off-canvas?file=package.json)
