@@ -1,0 +1,29 @@
+<ob-alert [type]="!form.dirty ? 'success' : 'warning'">
+  {{
+    !form.dirty
+      ? 'Form does not contain unsaved changes'
+      : 'Form contains unsaved changes'
+  }}
+</ob-alert>
+<form id="form1" obUnsavedChanges [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Text</mat-label>
+    <input matInput formControlName="field1" type="text" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Number</mat-label>
+    <input matInput formControlName="field2" type="number" />
+  </mat-form-field>
+
+  <pre>{{ form.value | json }}</pre>
+
+  <button
+    type="button"
+    mat-button
+    obButton="primary"
+    [disabled]="form.pristine"
+    (click)="save(form)"
+  >
+    Save
+  </button>
+</form>
