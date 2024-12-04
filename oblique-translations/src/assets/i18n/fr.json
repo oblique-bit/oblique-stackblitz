@@ -1,0 +1,12 @@
+{
+  "additional.translation": "Traduction supplémentaire",
+  "i18n.common.action": "Action",
+  "i18n.oblique.occurrences": "Nombre de notifications : {{occurrences}}",
+  "i18n.oblique.file-upload.error.failed": "Les fichiers suivants n'ont pas pu être téléchargés : {{ failedFiles }}",
+  "i18n.oblique.file-upload.error.size": "La taille maximale de fichier est de {{ maxSize }} MB. Les fichiers suivants sont ignorés : {{ ignoredFiles }}.",
+  "i18n.oblique.service-navigation.applications.image.online.alt": "Icône de l'application {{name}}",
+  "i18n.oblique.service-navigation.message.tooltip.text": "Cliquer pour aller sur la boîte de réception ({{count}} {{messagePluralizationKey}})",
+  "i18n.oblique.service-navigation.message.tooltip.singular": "nouvelle notification",
+  "i18n.oblique.service-navigation.message.tooltip.plural": "nouvelles notifications",
+  "i18n.oblique.service-navigation.message.tooltip.count.zero": "pas de"
+}
