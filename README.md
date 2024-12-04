@@ -17,3 +17,6 @@
 
 ## language change on date pipe example
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-language-change-on-date-pipe-example?file=package.json)
+
+## master-layout example
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-master-layout?file=package.json)
