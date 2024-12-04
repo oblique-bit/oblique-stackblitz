@@ -1,0 +1,12 @@
+{
+  "additional.translation": "Additional translation",
+  "i18n.common.action": "Action",
+  "i18n.oblique.occurrences": "Number of notifications: {{occurrences}}",
+  "i18n.oblique.file-upload.error.failed": "The following files could not be uploaded: {{ failedFiles }}",
+  "i18n.oblique.file-upload.error.size": "The maximum file size is {{ maxSize }} MB. The following files are ignored: {{ ignoredFiles }}.",
+  "i18n.oblique.service-navigation.applications.image.online.alt": "Icon of the {{name}} application",
+  "i18n.oblique.service-navigation.message.tooltip.text": "Click to go to your inbox ({{count}} {{messagePluralizationKey}})",
+  "i18n.oblique.service-navigation.message.tooltip.singular": "new notification",
+  "i18n.oblique.service-navigation.message.tooltip.plural": "new notifications",
+  "i18n.oblique.service-navigation.message.tooltip.count.zero": "no"
+}

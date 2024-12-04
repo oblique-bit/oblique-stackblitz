@@ -1,0 +1,146 @@
+<table class="ob-table ob-table-lg ob-table-cicd ob-table-collapse">
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Parameters</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-title="Key"><code>'additional.translation'</code></td>
+      <td data-title="Parameters">N/A</td>
+      <td data-title="Result">{{ 'additional.translation' | translate }}</td>
+    </tr>
+    <tr>
+      <td data-title="Key"><code>'i18n.common.action'</code></td>
+      <td data-title="Parameters">N/A</td>
+      <td data-title="Result">{{ 'i18n.common.action' | translate }}</td>
+    </tr>
+    <tr>
+      <td data-title="Key">
+        <code
+          >'i18n.oblique.service-navigation.applications.image.online.alt'</code
+        >
+      </td>
+      <td data-title="Parameters">
+        <code>{{ "{name: 'test'}" }}</code>
+      </td>
+      <td data-title="Result">
+        {{
+          'i18n.oblique.service-navigation.applications.image.online.alt'
+            | translate : { name: 'test' }
+        }}
+      </td>
+    </tr>
+
+    <tr>
+      <td data-title="Key"><code>'i18n.oblique.occurrences'</code></td>
+      <td data-title="Parameters">
+        <code>{{ '{occurrences: 99}' }}</code>
+      </td>
+      <td data-title="Result">
+        {{ 'i18n.oblique.occurrences' | translate : { occurrences: 99 } }}
+      </td>
+    </tr>
+    <tr>
+      <td data-title="Key">
+        <code>'i18n.oblique.file-upload.error.failed'</code>
+      </td>
+      <td data-title="Parameters">
+        <code>{{ '{failedFiles: this.failedFiles}' }}</code>
+      </td>
+      <td data-title="Result">
+        {{
+          'i18n.oblique.file-upload.error.failed'
+            | translate
+              : {
+                  failedFiles: this.failedFiles
+                }
+        }}
+      </td>
+    </tr>
+    <tr>
+      <td data-title="Key">
+        <code>'i18n.oblique.file-upload.error.size'</code>
+      </td>
+      <td data-title="Parameters">
+        <code>{{ '{maxSize: 5, ignoredFiles: this.ignoredFiles}' }}</code>
+      </td>
+      <td data-title="Result">
+        {{
+          'i18n.oblique.file-upload.error.size'
+            | translate
+              : {
+                  maxSize: 5,
+                  ignoredFiles: this.ignoredFiles
+                }
+        }}
+      </td>
+    </tr>
+    <tr>
+      <td data-title="Key">
+        <code>'i18n.oblique.service-navigation.message.tooltip.text'</code>
+      </td>
+      <td data-title="Parameters">
+        <code>{{
+          "{messagePluralizationKey: 'i18n.oblique.service-navigation.message.tooltip.plural', count: 'i18n.oblique.service-navigation.message.tooltip.count.zero'}"
+        }}</code>
+      </td>
+      <td data-title="Result">
+        {{
+          'i18n.oblique.service-navigation.message.tooltip.text'
+            | obTranslateParams
+              : {
+                  messagePluralizationKey:
+                    'i18n.oblique.service-navigation.message.tooltip.plural',
+                  count:
+                    'i18n.oblique.service-navigation.message.tooltip.count.zero'
+                }
+        }}
+      </td>
+    </tr>
+    <tr>
+      <td data-title="Key">
+        <code>'i18n.oblique.service-navigation.message.tooltip.text'</code>
+      </td>
+      <td data-title="Parameters">
+        <code>{{
+          "{messagePluralizationKey: 'i18n.oblique.service-navigation.message.tooltip.singular', count: 1}"
+        }}</code>
+      </td>
+      <td data-title="Result">
+        {{
+          'i18n.oblique.service-navigation.message.tooltip.text'
+            | obTranslateParams
+              : {
+                  messagePluralizationKey:
+                    'i18n.oblique.service-navigation.message.tooltip.singular',
+                  count: 1
+                }
+        }}
+      </td>
+    </tr>
+    <tr>
+      <td data-title="Key">
+        <code>'i18n.oblique.service-navigation.message.tooltip.text'</code>
+      </td>
+      <td data-title="Parameters">
+        <code>{{
+          "{messagePluralizationKey: 'i18n.oblique.service-navigation.message.tooltip.plural', count: 2}"
+        }}</code>
+      </td>
+      <td data-title="Result">
+        {{
+          'i18n.oblique.service-navigation.message.tooltip.text'
+            | obTranslateParams
+              : {
+                  messagePluralizationKey:
+                    'i18n.oblique.service-navigation.message.tooltip.plural',
+                  count: 2
+                }
+        }}
+      </td>
+    </tr>
+  </tbody>
+</table>
