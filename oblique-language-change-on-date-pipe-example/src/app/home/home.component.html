@@ -1,0 +1,10 @@
+<p>Change the language in the top right corner to see the date format change.</p>
+
+<h3>Now from date object:</h3>
+<p>{{ now | obDate }}</p>
+
+<h3>Now in the Pacific timezone:</h3>
+<p>{{ now | obDate : 'datetime' : 'PST' }}</p>
+
+<h3>From date string:</h3>
+<p>{{ '02-22-2022' | obDate }}</p>
