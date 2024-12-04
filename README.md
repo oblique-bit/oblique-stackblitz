@@ -32,3 +32,6 @@
 
 ## unsaved changes example
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-unsaved-changes?file=package.json)
+
+## bug report template
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-bug-report-template-new?file=package.json)
