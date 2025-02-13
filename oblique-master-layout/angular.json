@@ -20,7 +20,9 @@
             "outputPath": "dist/master-layout-example",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -37,10 +39,11 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/@oblique/oblique/styles/css/oblique-core.css",
-              "node_modules/@oblique/oblique/styles/css/roboto.css"
+              "node_modules/@oblique/oblique/styles/css/oblique-core.css"
             ],
-            "scripts": ["node_modules/@oblique/oblique/ob-features.js"]
+            "scripts": [
+              "node_modules/@oblique/oblique/ob-features.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -73,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "master-layout-example:build:production"
+              "buildTarget": "master-layout-example:build:production"
             },
             "development": {
-              "browserTarget": "master-layout-example:build:development"
+              "buildTarget": "master-layout-example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -91,7 +94,10 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
@@ -107,6 +113,8 @@
     }
   },
   "cli": {
-    "schematicCollections": ["@angular-eslint/schematics"]
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
