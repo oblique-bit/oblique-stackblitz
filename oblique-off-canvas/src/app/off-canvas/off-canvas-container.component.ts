@@ -9,7 +9,8 @@ import {
 } from '@oblique/oblique';
 
 @Component({
-  selector: 'app-off-canvas-container',
-  templateUrl: './off-canvas-container.component.html',
+    selector: 'app-off-canvas-container',
+    templateUrl: './off-canvas-container.component.html',
+    standalone: false
 })
 export class OffCanvasContainerComponent {}
