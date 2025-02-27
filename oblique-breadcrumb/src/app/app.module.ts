@@ -34,7 +34,14 @@ registerLocaleData(localeITCH);
     TranslateModule,
   ],
   providers: [
-    provideObliqueConfiguration({accessibilityStatement: {applicationName: "Replace me with the application's name", applicationOperator: 'Replace me with the name and address of the federal office that exploit this application, HTML is permitted', contact: {/* at least 1 email or phone number has to be provided */}}, }),
+    provideObliqueConfiguration(
+      {
+        accessibilityStatement: {
+          applicationName: "Replace me with the application's name",
+          applicationOperator: 'Replace me with the name and address of the federal office that exploit this application, HTML is permitted',
+          contact: {/* at least 1 email or phone number has to be provided */ emails: [''], phones: ['']},
+        },
+      }),
     {provide: LOCALE_ID, useValue: 'de-CH'},
     {provide: OB_BANNER, useValue: {text: 'DEMO'}},
   ],
