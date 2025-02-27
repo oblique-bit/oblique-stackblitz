@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-translations',
-  templateUrl: './translations.component.html',
-  styleUrls: ['./translations.component.scss'],
+    selector: 'app-translations',
+    templateUrl: './translations.component.html',
+    styleUrls: ['./translations.component.scss'],
+    standalone: false
 })
 export class TranslationsComponent {
   readonly failedFiles: string = [
