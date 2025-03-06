@@ -1,0 +1,32 @@
+{
+    "title": "Oblique Stackblitz",
+    "name": "oblique-stackblitz",
+    "version": "13.0.0",
+    "license": "MIT",
+    "organization": {
+        "name": "Federal Office of Information Technology, Systems and Telecommunication FOITT",
+        "url": "https://www.bit.admin.ch/"
+    },
+    "homepage": "https://oblique.bit.admin.ch",
+    "author": "Oblique Team <oblique@bit.admin.ch>",
+    "contributors": [
+        "https://github.com/oblique-bit/oblique-stackblitz/graphs/contributors"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/oblique-bit/oblique-stackblitz.git"
+    },
+    "scripts": {
+        "dependencies-update": "ts-node scripts/dependencies-update.ts"
+    },
+    "engines": {
+        "node": ">=18.13.0"
+    },
+    "dependencies": {
+        "tslib": "^2.8.1"
+    },
+    "devDependencies": {
+        "chalk": "^4.1.2",
+        "ts-node": "^10.9.2"
+    }
+}
