@@ -19,5 +19,10 @@ export class AppComponent {
       label: 'With sub nav',
       url: 'menu',
     },
+    {
+      label: 'Removable item',
+      url: 'menu',
+      removable: true,
+    },
   ];
 }
