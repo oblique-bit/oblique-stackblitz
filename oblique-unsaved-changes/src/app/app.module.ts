@@ -48,9 +48,9 @@ registerLocaleData(localeENCH);
       {
         accessibilityStatement:
         {
-          applicationName: "Replace me with the application's name",
-          applicationOperator: 'Replace me with the name and address of the federal office that exploit this application, HTML is permitted',
-          contact: {/* at least 1 email or phone number has to be provided */ emails: [''], phones: ['']},
+          applicationName: "Oblique Unsaved Changes example",
+          applicationOperator: 'Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern',
+          contact: {emails: ['oblique@bit.admin.ch']},
         },
       }),
     {provide: LOCALE_ID, useValue: 'en-US'}
