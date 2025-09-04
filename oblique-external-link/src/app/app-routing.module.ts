@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent }
+  { path: '', redirectTo: 'oblique-external-link', pathMatch: 'full' },
+  { path: 'oblique-external-link', component: HomeComponent }
 ];
 
 @NgModule({

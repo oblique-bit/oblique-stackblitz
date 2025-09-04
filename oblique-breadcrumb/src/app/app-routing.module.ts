@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { BreadcrumbSampleComponent } from './breadcrumb-sample/breadcrumb-sample.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'breadcrumb', pathMatch: 'full' },
+  { path: '', redirectTo: 'oblique-breadcrumb', pathMatch: 'full' },
   {
-    path: 'breadcrumb',
+    path: 'oblique-breadcrumb',
     component: BreadcrumbSampleComponent,
     children: [
       {

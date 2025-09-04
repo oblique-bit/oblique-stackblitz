@@ -7,5 +7,5 @@ import { ObINavigationLink } from '@oblique/oblique';
     standalone: false
 })
 export class AppComponent {
-  topNavigation: ObINavigationLink[] = [{ url: 'home', label: 'Home' }];
+  topNavigation: ObINavigationLink[] = [{ url: 'oblique-date-component', label: 'Home' }];
 }

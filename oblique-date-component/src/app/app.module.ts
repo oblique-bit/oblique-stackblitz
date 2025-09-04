@@ -54,5 +54,8 @@ export class AppModule {
 
   constructor() {
     this.config.locale.locales = ['de-CH', 'en-US'];
-  }
+
+    const masterLayoutConfig = inject(ObMasterLayoutConfig)
+    masterLayoutConfig.homePageRoute = "/oblique-date-component";
+  };
 }

@@ -59,5 +59,8 @@ export class AppModule {
 
   constructor() {
     this.config.locale.locales = ['de-CH', 'en-CH'];
-  }
+
+    const masterLayoutConfig = inject(ObMasterLayoutConfig);
+    masterLayoutConfig.homePageRoute = "/datepicker-sample";
+  };
 }

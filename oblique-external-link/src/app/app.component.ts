@@ -8,6 +8,6 @@ import { ObINavigationLink } from '@oblique/oblique';
 })
 export class AppComponent {
   topNavigation: ObINavigationLink[] = [
-    { url: 'home', label: 'Home' }
+    { url: 'oblique-external-link', label: 'Home' }
   ];
 }

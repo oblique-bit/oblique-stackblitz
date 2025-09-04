@@ -4,8 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { SubPageComponent } from './sub-page/sub-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'oblique-bug-report-template-new', pathMatch: 'full' },
+  { path: 'oblique-bug-report-template-new', component: HomeComponent },
   { path: 'menu/sub1', component: SubPageComponent },
 ];
 
