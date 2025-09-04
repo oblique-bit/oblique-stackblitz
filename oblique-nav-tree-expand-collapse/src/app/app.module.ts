@@ -18,6 +18,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {TranslateModule} from '@ngx-translate/core';
 import {HomeComponent} from './home/home.component';
 import {MatButtonModule} from '@angular/material/button';
+import {ObMasterLayoutConfig} from '@oblique/oblique';
+import {inject} from '@angular/core';
 
 registerLocaleData(localeDECH);
 registerLocaleData(localeFRCH);
@@ -52,4 +54,9 @@ registerLocaleData(localeITCH);
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    const masterLayoutConfig = inject(ObMasterLayoutConfig);
+    masterLayoutConfig.homePageRoute = "/oblique-nav-tree-expand-collapse";
+  };
+}

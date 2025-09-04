@@ -1,4 +1,4 @@
-import {LOCALE_ID, NgModule} from '@angular/core';
+import {inject, LOCALE_ID, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -16,6 +16,7 @@ import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 import {TranslateModule} from '@ngx-translate/core';
 import {HomeComponent} from './home/home.component';
 import {SubPageComponent} from './sub-page/sub-page.component';
+import {ObMasterLayoutConfig} from '@oblique/oblique';
 
 registerLocaleData(localeDECH);
 registerLocaleData(localeFRCH);
@@ -51,4 +52,9 @@ registerLocaleData(localeITCH);
     provideHttpClient(withInterceptorsFromDi())
   ]
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    const masterLayoutConfig = inject(ObMasterLayoutConfig)
+    masterLayoutConfig.homePageRoute = "/oblique-bug-report-template-new";
+  };
+}

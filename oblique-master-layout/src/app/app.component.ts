@@ -8,7 +8,7 @@ import { ObINavigationLink } from '@oblique/oblique';
 })
 export class AppComponent {
   topNavigation: ObINavigationLink[] = [
-    { url: 'home', label: 'Home' },
+    { url: 'oblique-master-layout', label: 'Home' },
     {
       children: [
         {
