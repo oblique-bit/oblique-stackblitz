@@ -15,7 +15,7 @@ import localeDECH from '@angular/common/locales/de-CH';
 import localeFRCH from '@angular/common/locales/fr-CH';
 import localeITCH from '@angular/common/locales/it-CH';
 import localeEN from '@angular/common/locales/en';
-import {HttpClientModule} from '@angular/common/http';
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 import {TranslateModule} from '@ngx-translate/core';
 import {HomeComponent} from './home/home.component';
 
@@ -32,7 +32,6 @@ registerLocaleData(localeEN);
     ObMasterLayoutModule,
     ObLanguageModule,
     BrowserAnimationsModule,
-    HttpClientModule,
     TranslateModule,
   ],
   providers: [
@@ -40,12 +39,15 @@ registerLocaleData(localeEN);
       {
         accessibilityStatement:
         {
+          createdOn: new Date('2025-09-25'),
+          conformity: 'none',
           applicationName: "Oblique ObDateComponent example",
           applicationOperator: 'Bundesamt für Informatik und Telekommunikation BIT<br>Campus Meielen<br>Eichenweg 3<br>CH-3003 Bern',
-          contact: {emails: ['oblique@bit.admin.ch']}
+          contact: [{email: 'oblique@bit.admin.ch'}]
         },
       }),
-    {provide: LOCALE_ID, useValue: 'de-CH'}
+    {provide: LOCALE_ID, useValue: 'de-CH'},
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [AppComponent],
 })
