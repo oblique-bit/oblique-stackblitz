@@ -16,9 +16,9 @@ import localeFRCH from '@angular/common/locales/fr-CH';
 import localeITCH from '@angular/common/locales/it-CH';
 import localeENCH from '@angular/common/locales/en-CH';
 import localeES from '@angular/common/locales/es';
-import {HttpClientModule} from '@angular/common/http';
 import {TranslateModule} from '@ngx-translate/core';
 import {TranslationsComponent} from './translations/translations.component';
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 
 registerLocaleData(localeDECH);
 registerLocaleData(localeENCH);
@@ -34,7 +34,6 @@ registerLocaleData(localeITCH);
     ObMasterLayoutModule,
     BrowserAnimationsModule,
     ObTranslateParamsModule,
-    HttpClientModule,
     TranslateModule,
   ],
   providers: [
@@ -42,12 +41,15 @@ registerLocaleData(localeITCH);
       {
         accessibilityStatement:
         {
+          createdOn: new Date('2025-09-26'),
+          conformity: 'none',
           applicationName: "Oblique Translations example",
           applicationOperator: 'Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern',
-          contact: {emails: ['oblique@bit.admin.ch']},
+          contact: [{email: 'oblique@bit.admin.ch'}],
         },
       }),
-    {provide: LOCALE_ID, useValue: 'de-CH'}
+    {provide: LOCALE_ID, useValue: 'de-CH'},
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [AppComponent],
 })
