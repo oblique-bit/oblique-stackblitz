@@ -13,7 +13,7 @@ import {
 } from '@oblique/oblique';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {JsonPipe, registerLocaleData} from '@angular/common';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 import localeENCH from '@angular/common/locales/en-CH';
 import {TranslateModule} from '@ngx-translate/core';
 import {UnsavedChangesComponent} from './unsaved-changes/unsaved-changes.component';
@@ -40,7 +40,6 @@ registerLocaleData(localeENCH);
     AppRoutingModule,
     ObMasterLayoutModule,
     BrowserAnimationsModule,
-    HttpClientModule,
     TranslateModule,
   ],
   providers: [
@@ -48,12 +47,15 @@ registerLocaleData(localeENCH);
       {
         accessibilityStatement:
         {
+          createdOn: new Date('2025-09-26'),
+          conformity: 'none',
           applicationName: "Oblique Unsaved Changes example",
           applicationOperator: 'Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern',
-          contact: {emails: ['oblique@bit.admin.ch']},
+          contact: [{email: 'oblique@bit.admin.ch'}],
         },
       }),
-    {provide: LOCALE_ID, useValue: 'en-US'}
+    {provide: LOCALE_ID, useValue: 'en-US'},
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [AppComponent],
 })
