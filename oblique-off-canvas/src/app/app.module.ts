@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
@@ -11,7 +11,7 @@ import {
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {OffCanvasContainerComponent} from './off-canvas/off-canvas-container.component';
 import {TranslateModule} from '@ngx-translate/core';
-import {HttpClientModule} from '@angular/common/http';
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, OffCanvasContainerComponent],
@@ -20,7 +20,6 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     ObMasterLayoutModule,
     ObOffCanvasModule,
-    HttpClientModule,
     TranslateModule,
     RouterModule.forRoot([
       {path: '', component: OffCanvasContainerComponent},
@@ -31,11 +30,15 @@ import {HttpClientModule} from '@angular/common/http';
       {
         accessibilityStatement:
         {
+          createdOn: new Date('2025-09-26'),
+          conformity: 'none',
           applicationName: "Oblique Off Canvas example",
           applicationOperator: 'Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern',
-          contact: {emails: ['oblique@bit.admin.ch']},
+          contact: [{email: 'oblique@bit.admin.ch'}],
         },
       }),
+    {provide: LOCALE_ID, useValue: 'de-CH'},
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [AppComponent]
 })
