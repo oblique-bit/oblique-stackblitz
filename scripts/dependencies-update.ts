@@ -8,6 +8,7 @@ class DependenciesUpdate extends StaticScript {
 	static perform(): void {
         const obliqueVersion = DependenciesUpdate.getVersion();
         DependenciesUpdate.updateDependencies(obliqueVersion);
+        DependenciesUpdate.updateProject(obliqueVersion);
 	}
 
     private static getVersion(): string {
@@ -35,6 +36,26 @@ class DependenciesUpdate extends StaticScript {
 	private static execute(command: string): void {
 		executeCommandWithLog(`${command} --fund false`, `Execute`);
 	}
+
+    private static updateProject(version: string): void {
+        Log.start('Update release version and date in project files');
+        DependenciesUpdate.updatePubliccode(version);
+        executeCommandWithLog(`git commit -am "build(stackblitz): update to oblique@${version}"`, 'Execute');
+        Log.success();
+    }
+
+    private static updatePubliccode(version: string): void {
+        // ignores preversions
+        if (/^\d+\.\d+\.\d+\$/u.test(version)) {
+            Log.info('Update publiccode release version and date');
+            const today = new Date().toISOString().split('T')[0];
+            Files.overwrite('publiccode.yml', content =>
+                content
+                    .replace(/(?<=softwareVersion:\s)\d+\.\d+\.\d+/u, version)
+                    .replace(/(?<=releaseDate:\s)\d{4}-\d{2}-\d{2}/, today)
+            );
+        }
+    }
 }
 
 DependenciesUpdate.perform();

@@ -1,0 +1,58 @@
+publiccodeYmlVersion: 0.5.0
+name: Oblique Stackblitz
+applicationSuite: Oblique
+url: https://github.com/oblique-bit/oblique-stackblitz.git
+landingURL: https://github.com/oblique-bit/oblique-stackblitz
+softwareVersion: 14.1.0
+releaseDate: 2025-11-03
+platforms:
+  - web
+categories:
+  - application-development
+fundedBy:
+  - name: FOITT
+    uri: https://www.bit.admin.ch/en
+usedBy:
+  - Federal Office of Information Technology, Systems and Telecommunication
+    (FOITT)
+developmentStatus: stable
+softwareType: library
+organisation:
+  uri: https://ld.admin.ch/office/V.1.7
+  name: Federal Office of Information Technology, Systems and Telecommunication
+description:
+  en:
+    localisedName: Oblique Stackblitz
+    shortDescription: "StackBlitz examples for Oblique features not covered in the
+      main docs and a ready-to-use bug reproduction template "
+    longDescription: >-
+      This repository serves two purposes:
+
+
+      It hosts live StackBlitz examples showcasing Oblique features that are not
+      covered in the main documentation, allowing users to explore and
+      experiment in a hands-on environment.
+
+
+      It provides a bug report template — an empty StackBlitz project with
+      Oblique pre-installed — that can be used to reproduce and report issues
+      for any feature of the library.
+
+
+      The Oblique team maintains the base setup and keeps dependencies up to
+      date. This repository complements the official documentation by offering
+      interactive demonstrations and a standardized environment for reporting
+      bugs across all features.
+    features:
+      - Examples of Oblique features
+legal:
+  license: mit
+maintenance:
+  type: internal
+  contacts:
+    - name: Oblique
+      email: oblique@bit.admin.ch
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - en
