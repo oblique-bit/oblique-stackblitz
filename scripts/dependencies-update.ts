@@ -40,6 +40,7 @@ class DependenciesUpdate extends StaticScript {
     private static updateProject(version: string): void {
         Log.start('Update release version and date in project files');
         DependenciesUpdate.updatePubliccode(version);
+        DependenciesUpdate.updatePackageJson(version);
         executeCommandWithLog(`git commit -am "build(stackblitz): update to oblique@${version}"`, 'Execute');
         Log.success();
     }
@@ -55,6 +56,13 @@ class DependenciesUpdate extends StaticScript {
                     .replace(/(?<=releaseDate:\s)\d{4}-\d{2}-\d{2}/, today)
             );
         }
+    }
+
+    private static updatePackageJson(version: string): void {
+        Log.info('Update package.json release version');
+        Files.overwrite('package.json', content =>
+            content.replace(/(?<="version":\s")\d+\.\d+\.\d+(-(?:alpha|beta|rc)\.\d+)?(?=")/u, version)
+        );
     }
 }
 
