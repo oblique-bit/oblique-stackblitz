@@ -7,7 +7,7 @@ class DependenciesUpdate extends StaticScript {
 
 	static perform(): void {
         const obliqueVersion = DependenciesUpdate.getVersion();
-        DependenciesUpdate.updateDependencies(obliqueVersion);
+        // DependenciesUpdate.updateDependencies(obliqueVersion);
         DependenciesUpdate.updateProject(obliqueVersion);
 	}
 
@@ -47,7 +47,7 @@ class DependenciesUpdate extends StaticScript {
 
     private static updatePubliccode(version: string): void {
         // ignores preversions
-        if (/^\d+\.\d+\.\d+\$/u.test(version)) {
+        if (/^\d+\.\d+\.\d+$/u.test(version)) {
             Log.info('Update publiccode release version and date');
             const today = new Date().toISOString().split('T')[0];
             Files.overwrite('publiccode.yml', content =>
