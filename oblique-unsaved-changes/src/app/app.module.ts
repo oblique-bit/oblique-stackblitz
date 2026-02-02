@@ -11,7 +11,6 @@ import {
   ObMasterLayoutConfig,
   provideObliqueConfiguration
 } from '@oblique/oblique';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {JsonPipe, registerLocaleData} from '@angular/common';
 import {HttpClientModule, provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 import localeENCH from '@angular/common/locales/en-CH';
@@ -39,7 +38,7 @@ registerLocaleData(localeENCH);
     ObButtonModule,
     AppRoutingModule,
     ObMasterLayoutModule,
-    BrowserAnimationsModule,
+    
     TranslateModule,
   ],
   providers: [
