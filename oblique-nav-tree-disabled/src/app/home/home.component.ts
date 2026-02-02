@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit{
 		items: [
 			{
 				id: 'tree-item-1',
-				label: 'Tree item 1',
+				label: 'Disabled item 1',
 				disabled: true
 			},
 			{
