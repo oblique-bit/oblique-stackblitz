@@ -8,7 +8,6 @@ import {
   ObOffCanvasModule,
   provideObliqueConfiguration
 } from '@oblique/oblique';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {OffCanvasContainerComponent} from './off-canvas/off-canvas-container.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
@@ -16,7 +15,7 @@ import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent, OffCanvasContainerComponent],
   imports: [
-    BrowserAnimationsModule,
+    
     BrowserModule,
     ObMasterLayoutModule,
     ObOffCanvasModule,
