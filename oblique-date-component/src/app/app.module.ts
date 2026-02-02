@@ -9,7 +9,6 @@ import {
   ObLanguageModule,
   provideObliqueConfiguration
 } from '@oblique/oblique';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {registerLocaleData} from '@angular/common';
 import localeDECH from '@angular/common/locales/de-CH';
 import localeFRCH from '@angular/common/locales/fr-CH';
@@ -31,7 +30,7 @@ registerLocaleData(localeEN);
     AppRoutingModule,
     ObMasterLayoutModule,
     ObLanguageModule,
-    BrowserAnimationsModule,
+    
     TranslateModule,
   ],
   providers: [
