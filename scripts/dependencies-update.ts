@@ -7,7 +7,7 @@ class DependenciesUpdate extends StaticScript {
 
 	static perform(): void {
         const obliqueVersion = DependenciesUpdate.getVersion();
-        // DependenciesUpdate.updateDependencies(obliqueVersion);
+        DependenciesUpdate.updateDependencies(obliqueVersion);
         DependenciesUpdate.updateProject(obliqueVersion);
 	}
 
@@ -23,14 +23,26 @@ class DependenciesUpdate extends StaticScript {
             .filter(project => !excludedProjects.includes(project))
             .forEach(project => {
                 Log.start(`Update dependencies of ${project}`);
-                DependenciesUpdate.execute(`npm update --prefix ./${project} --save --audit false`);
-                DependenciesUpdate.execute(`npm audit fix --prefix ./${project} --audit-level=none`);
-                DependenciesUpdate.execute(`npm dedupe --prefix ./${project} --audit false`);
-                DependenciesUpdate.execute(`npm prune --prefix ./${project} --audit false`);
-                executeCommandWithLog(`git commit -am "feat(stackblitz/${project}): update to oblique@${obliqueVersion}"`, 'Execute');
+                if (obliqueVersion.endsWith('0.0')) {
+                    this.updateMajor(project);
+                } else {
+                    this.updateRegular(project);
+                }
+                executeCommandWithLog(`git commit -am "feat(${project}): update to oblique@${obliqueVersion}"`, 'Execute');
                 Log.success();
             });
 
+    }
+
+    private static updateMajor(project): void{
+        executeCommandWithLog(`npx @oblique/cli@latest update`, `Execute`, { cwd: `./${project}` });
+    }
+
+    private static updateRegular(project: string): void {
+        DependenciesUpdate.execute(`npm update --prefix ./${project} --save --audit false`);
+        DependenciesUpdate.execute(`npm audit fix --prefix ./${project} --audit-level=none`);
+        DependenciesUpdate.execute(`npm dedupe --prefix ./${project} --audit false`);
+        DependenciesUpdate.execute(`npm prune --prefix ./${project} --audit false`);
     }
 
 	private static execute(command: string): void {
