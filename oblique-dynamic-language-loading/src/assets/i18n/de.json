@@ -1,0 +1,12 @@
+{
+  "additional.translation": "Zusätzliche Übersetzung",
+  "i18n.common.action": "Aktion",
+  "i18n.oblique.occurrences": "Anzahl Notifikationen: {{occurrences}}",
+  "i18n.oblique.file-upload.error.failed": "Die folgenden Dateien konnten nicht hochgeladen werden: {{ failedFiles }}",
+  "i18n.oblique.file-upload.error.size": "Die maximale Datei Größe beträgt {{ maxSize }} MB. Die folgenden Dateien werden ignoriert: {{ ignoredFiles }}.",
+  "i18n.oblique.service-navigation.applications.image.online.alt": "Icon der {{name}}-Anwendung",
+  "i18n.oblique.service-navigation.message.tooltip.text": "Klicken um zum Posteingang zu gehen ({{count}} {{messagePluralizationKey}})",
+  "i18n.oblique.service-navigation.message.tooltip.singular": "neue Benachrichtigung",
+  "i18n.oblique.service-navigation.message.tooltip.plural": "neuen Benachrichtigungen",
+  "i18n.oblique.service-navigation.message.tooltip.count.zero": "keine"
+}

@@ -1,0 +1,12 @@
+{
+  "additional.translation": "Traduzione aggiuntiva",
+  "i18n.common.action": "Azione",
+  "i18n.oblique.occurrences": "Numero di notifiche: {{occurrences}}",
+  "i18n.oblique.file-upload.error.failed": "The following files could not be uploaded: {{ failedFiles }}",
+  "i18n.oblique.file-upload.error.size": "La dimensione massima di file è {{ maxSize }} MB. I seguenti file sono ignorati: {{ ignoredFiles }}.",
+  "i18n.oblique.service-navigation.applications.image.online.alt": "Icona dell'applicazione {{name}}",
+  "i18n.oblique.service-navigation.message.tooltip.text": "Cliccare per raggiungere la tua casella di posta ({{count}} {{messagePluralizationKey}})",
+  "i18n.oblique.service-navigation.message.tooltip.singular": "nuova notifica",
+  "i18n.oblique.service-navigation.message.tooltip.plural": "nuove notifiche",
+  "i18n.oblique.service-navigation.message.tooltip.count.zero": "nessun"
+}
