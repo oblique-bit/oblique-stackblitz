@@ -1,0 +1,12 @@
+{
+  "additional.translation": "Traducción adicional",
+  "i18n.common.action": "Acción",
+  "i18n.oblique.occurrences": "Número de notificaciones: {{occurrences}}",
+  "i18n.oblique.file-upload.error.failed": "No se pudieron cargar los siguientes archivos: {{ failedFiles }}",
+  "i18n.oblique.file-upload.error.size": "El tamaño máximo de archivo es {{ maxSize }} MB. Se ignoran los siguientes archivos: {{ ignoredFiles }}.",
+  "i18n.oblique.service-navigation.applications.image.online.alt": "Icono de la aplicación {{name}}",
+  "i18n.oblique.service-navigation.message.tooltip.text": "Haga clic para ir a su bandeja de entrada ({{count}} {{messagePluralizationKey}})",
+  "i18n.oblique.service-navigation.message.tooltip.singular": "nueva notificación",
+  "i18n.oblique.service-navigation.message.tooltip.plural": "nuevas notificaciones",
+  "i18n.oblique.service-navigation.message.tooltip.count.zero": "no"
+}

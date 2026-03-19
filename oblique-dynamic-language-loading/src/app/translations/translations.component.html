@@ -1,0 +1,11 @@
+<section class="example">
+    <h1 lang="en">Dynamic language loading</h1>
+    <p lang="en">
+        Start with one static fallback language, then replace it during app initialization with the locales returned by
+        the backend.
+    </p>
+
+    <p><strong  lang="en">Loaded translation:</strong><span [lang]="currentLang"> {{ 'additional.translation' | translate }}</span></p>
+
+    <p lang="en"><strong>How to test:</strong> use the language switch in the master-layout header to change language.</p>
+</section>
