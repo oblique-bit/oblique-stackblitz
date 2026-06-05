@@ -1,0 +1,38 @@
+<p>Home</p>
+
+<table class="ob-table">
+	<caption>
+		ObLocalizePipe handles localization of URLs based on the current language. If hasLanguageInUrl is true, the pipe
+		will include the language code in the URL.
+	</caption>
+	<thead>
+		<tr>
+			<th>Input URL</th>
+			<th>transformed URL</th>
+            <th>Link</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>/menu/sub1</td>
+			<td>{{ "/menu/sub1" | obLocalize }}</td>
+            <td><a href="{{ '/menu/sub1' | obLocalize }}">sub page</a></td>
+		</tr>
+		<tr>
+			<td>/en/menu/sub1</td>
+			<td>{{ "/en/menu/sub1" | obLocalize }}</td>
+            <td><a href="{{ '/en/menu/sub1' | obLocalize }}">sub page</a></td>
+		</tr>
+		<tr>
+			<td>/fr/menu/sub1</td>
+			<td>{{ "/fr/menu/sub1" | obLocalize }}</td>
+            <td><a href="{{ '/fr/menu/sub1' | obLocalize }}">sub page</a></td>
+		</tr>
+		<tr>
+			<td>/it/menu/sub1</td>
+			<td>{{ "/it/menu/sub1" | obLocalize }}</td>
+            <td><a href="{{ '/it/menu/sub1' | obLocalize }}">sub page</a></td>
+		</tr>
+	</tbody>
+</table>
+menu/sub1

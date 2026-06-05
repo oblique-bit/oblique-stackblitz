@@ -35,6 +35,7 @@ environment for reporting bugs across all features.
 | Unknown route                    | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-oblique-unknown-route-example?file=package.json)        |
 | Unsaved Changes                  | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-unsaved-changes?file=package.json)                      |
 | Bug report template              | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-bug-report-template-new?file=package.json)              |
+| Localize Pipe             | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oblique-bit/oblique-stackblitz/tree/master/oblique-localize-pipe?file=package.json)              |
 
 ## License
 
