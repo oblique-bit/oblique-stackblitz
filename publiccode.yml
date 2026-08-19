@@ -3,8 +3,8 @@ name: Oblique Stackblitz
 applicationSuite: Oblique
 url: https://github.com/oblique-bit/oblique-stackblitz.git
 landingURL: https://github.com/oblique-bit/oblique-stackblitz
-softwareVersion: 15.4.3
-releaseDate: 2026-08-05
+softwareVersion: 15.4.4
+releaseDate: 2026-08-19
 platforms:
   - web
 categories:
