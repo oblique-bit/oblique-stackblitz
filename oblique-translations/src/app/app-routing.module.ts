@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { TranslationsComponent } from './translations/translations.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { TranslationsComponent } from "./translations/translations.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: TranslationsComponent },
+  { path: "", redirectTo: "home", pathMatch: "full" },
+  { path: "home", component: TranslationsComponent },
 ];
 
 @NgModule({

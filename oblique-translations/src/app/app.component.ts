@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { ObINavigationLink } from '@oblique/oblique';
+import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { ObINavigationLink } from "@oblique/oblique";
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    standalone: false
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class AppComponent {}
