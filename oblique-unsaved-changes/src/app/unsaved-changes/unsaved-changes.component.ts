@@ -1,10 +1,11 @@
-import { Component, inject } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
+import { UntypedFormBuilder, UntypedFormGroup } from "@angular/forms";
 
 @Component({
-    selector: 'app-unsaved-changes',
-    templateUrl: './unsaved-changes.component.html',
-    standalone: false
+  selector: "app-unsaved-changes",
+  templateUrl: "./unsaved-changes.component.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class UnsavedChangesComponent {
   form: UntypedFormGroup;
