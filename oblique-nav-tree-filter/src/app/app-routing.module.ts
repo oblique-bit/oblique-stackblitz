@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'oblique-nav-tree-filter', pathMatch: 'full' },
-  { path: 'oblique-nav-tree-filter', component: HomeComponent }
+  { path: "", redirectTo: "oblique-nav-tree-filter", pathMatch: "full" },
+  { path: "oblique-nav-tree-filter", component: HomeComponent },
 ];
 
 @NgModule({
