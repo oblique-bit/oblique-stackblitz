@@ -25,14 +25,14 @@ registerLocaleData(localeFRCH);
 registerLocaleData(localeITCH);
 
 @NgModule({
-  declarations: [AppComponent, TranslationsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ObMasterLayoutModule,
     TranslatePipe
   ],
+  declarations: [AppComponent, TranslationsComponent],
   providers: [provideHttpClient(withXhr(), withInterceptorsFromDi())],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
