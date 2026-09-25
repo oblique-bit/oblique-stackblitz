@@ -1,15 +1,14 @@
-import { inject, LOCALE_ID, NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
+import {LOCALE_ID, NgModule, inject} from "@angular/core";
+import {BrowserModule} from "@angular/platform-browser";
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
+import {AppRoutingModule} from "./app-routing.module";
+import {AppComponent} from "./app.component";
 import {
-  OB_BANNER,
+  ObMasterLayoutConfig,
   ObMasterLayoutModule,
   provideObliqueConfiguration,
-  ObMasterLayoutConfig,
 } from "@oblique/oblique";
-import { registerLocaleData } from "@angular/common";
+import {registerLocaleData} from "@angular/common";
 import localeDECH from "@angular/common/locales/de-CH";
 import localeFRCH from "@angular/common/locales/fr-CH";
 import localeITCH from "@angular/common/locales/it-CH";
@@ -18,19 +17,19 @@ import {
   withInterceptorsFromDi,
   withXhr,
 } from "@angular/common/http";
-import { HomeComponent } from "./home/home.component";
+import {HomeComponent} from "./home/home.component";
 
 registerLocaleData(localeDECH);
 registerLocaleData(localeFRCH);
 registerLocaleData(localeITCH);
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ObMasterLayoutModule
   ],
+  declarations: [AppComponent, HomeComponent],
   providers: [
     provideObliqueConfiguration({
       accessibilityStatement: {
@@ -39,14 +38,14 @@ registerLocaleData(localeITCH);
         applicationName: "Oblique Banner example",
         applicationOperator:
           "Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern",
-        contact: [{ email: "oblique@bit.admin.ch" }],
+        contact: [{email: "oblique@bit.admin.ch"}],
       },
+      banner: {text: "DEMO"}
     }),
-    { provide: LOCALE_ID, useValue: "de-CH" },
-    { provide: OB_BANNER, useValue: { text: "DEMO" } },
+    {provide: LOCALE_ID, useValue: "de-CH"},
     provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor() {
