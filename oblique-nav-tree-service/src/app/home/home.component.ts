@@ -1,26 +1,26 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   inject,
-  OnInit,
-  ChangeDetectionStrategy,
 } from "@angular/core";
-import { ObNavTreeItemModel } from "@oblique/oblique";
-import { map, Observable, of } from "rxjs";
-import { DataService } from "./data.service";
+import {ObNavTreeItemModel} from "@oblique/oblique";
+import {type Observable, map} from "rxjs";
+import {DataService} from "./data.service";
 
 @Component({
   selector: "app-home",
-  templateUrl: "./home.component.html",
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
+  templateUrl: "./home.component.html",
+  changeDetection: ChangeDetectionStrategy.Eager
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   items$: Observable<ObNavTreeItemModel[]>;
   private readonly dataService = inject(DataService);
 
-  ngOnInit(): void {
+  constructor() {
     this.items$ = this.dataService
       .getData()
       .pipe(map((data) => data.map((item) => new ObNavTreeItemModel(item))));
   }
 }
+
