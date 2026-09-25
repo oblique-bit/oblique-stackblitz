@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { ObNavTreeItemModel } from "@oblique/oblique";
-import { Observable, of } from "rxjs";
+import { type Observable, of } from "rxjs";
 
 @Injectable({ providedIn: "root" })
 export class DataService {

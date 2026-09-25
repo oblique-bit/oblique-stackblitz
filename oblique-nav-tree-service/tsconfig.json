@@ -6,7 +6,7 @@
     "outDir": "./dist/out-tsc",
     "ignoreDeprecations": "6.0",
     "forceConsistentCasingInFileNames": true,
-    "strict": false,
+    "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -27,5 +27,6 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": false
-  }
+  },
+  "references": [{ "path": "tsconfig.eslint.json" }]
 }
