@@ -29,7 +29,6 @@ registerLocaleData(localeFRCH);
 registerLocaleData(localeITCH);
 
 @NgModule({
-  declarations: [AppComponent, TranslationsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,6 +36,7 @@ registerLocaleData(localeITCH);
     TranslatePipe,
     ObTranslateParamsModule,
   ],
+  declarations: [AppComponent, TranslationsComponent],
   providers: [
     provideObliqueConfiguration({
       accessibilityStatement: {
@@ -58,6 +58,6 @@ registerLocaleData(localeITCH);
     { provide: LOCALE_ID, useValue: "de-CH" },
     provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
