@@ -1,12 +1,12 @@
-import { inject, LOCALE_ID, NgModule } from "@angular/core";
+import { LOCALE_ID, NgModule, inject } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import {
+  ObMasterLayoutConfig,
   ObMasterLayoutModule,
   provideObliqueConfiguration,
-  ObMasterLayoutConfig,
 } from "@oblique/oblique";
 import { registerLocaleData } from "@angular/common";
 import localeDECH from "@angular/common/locales/de-CH";
@@ -25,13 +25,12 @@ registerLocaleData(localeFRCH);
 registerLocaleData(localeITCH);
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SubPageComponent],
-  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ObMasterLayoutModule
   ],
+  declarations: [AppComponent, HomeComponent, SubPageComponent],
   providers: [
     provideObliqueConfiguration({
       accessibilityStatement: {
@@ -46,6 +45,7 @@ registerLocaleData(localeITCH);
     { provide: LOCALE_ID, useValue: "de-CH" },
     provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor() {
