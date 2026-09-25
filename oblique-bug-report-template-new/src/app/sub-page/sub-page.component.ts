@@ -1,9 +1,9 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
   selector: "app-sub-page",
-  templateUrl: "./sub-page.component.html",
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
+  templateUrl: "./sub-page.component.html",
+  changeDetection: ChangeDetectionStrategy.Eager
 })
 export class SubPageComponent {}
