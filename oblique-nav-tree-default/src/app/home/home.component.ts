@@ -1,49 +1,50 @@
-import { Component, OnInit } from '@angular/core';
-import {ObNavTreeItemModel} from '@oblique/oblique';
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import { ObNavTreeItemModel } from "@oblique/oblique";
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    standalone: false
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
-export class HomeComponent implements OnInit{
-    public items: ObNavTreeItemModel[] = [];
-	private readonly tree = {
-		label: 'Navigation Tree',
-		items: [
-			{
-				id: 'tree-item-1',
-				label: 'Tree item 1'
-			},
-			{
-				id: 'tree-item-2',
-				label: 'New to Oblique? Sign up!',
-				labelParams: {title: 'Oblique'},
-				items: [
-					{
-						id: 'tree-item-2-1',
-						label: 'Tree item 2.1'
-					},
-					{
-						id: 'tree-item-2-2',
-						label: 'Tree item 2.2',
-						items: [
-							{
-								id: 'tree-item-2-2-alpha',
-								label: 'Tree item 2.2#alpha'
-							},
-							{
-								id: 'tree-item-2-2-beta',
-								label: 'Tree item 2.2#beta'
-							}
-						]
-					}
-				]
-			}
-		]
-	};
+export class HomeComponent implements OnInit {
+  public items: ObNavTreeItemModel[] = [];
+  private readonly tree = {
+    label: "Navigation Tree",
+    items: [
+      {
+        id: "tree-item-1",
+        label: "Tree item 1",
+      },
+      {
+        id: "tree-item-2",
+        label: "New to Oblique? Sign up!",
+        labelParams: { title: "Oblique" },
+        items: [
+          {
+            id: "tree-item-2-1",
+            label: "Tree item 2.1",
+          },
+          {
+            id: "tree-item-2-2",
+            label: "Tree item 2.2",
+            items: [
+              {
+                id: "tree-item-2-2-alpha",
+                label: "Tree item 2.2#alpha",
+              },
+              {
+                id: "tree-item-2-2-beta",
+                label: "Tree item 2.2#beta",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
 
-	ngOnInit(): void {
-		this.items = this.tree.items.map(item => new ObNavTreeItemModel(item));
-	}
+  ngOnInit(): void {
+    this.items = this.tree.items.map((item) => new ObNavTreeItemModel(item));
+  }
 }
