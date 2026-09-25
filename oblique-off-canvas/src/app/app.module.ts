@@ -3,8 +3,8 @@ import { RouterModule } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
 import {
+  type ObMasterLayoutConfig,
   ObMasterLayoutModule,
-  ObMasterLayoutConfig,
   ObOffCanvasModule,
   provideObliqueConfiguration,
 } from "@oblique/oblique";
@@ -16,7 +16,6 @@ import {
 } from "@angular/common/http";
 
 @NgModule({
-  declarations: [AppComponent, OffCanvasContainerComponent],
   imports: [
     BrowserModule,
     ObMasterLayoutModule,
@@ -25,6 +24,7 @@ import {
       { path: "", component: OffCanvasContainerComponent },
     ]),
   ],
+  declarations: [AppComponent, OffCanvasContainerComponent],
   providers: [
     provideObliqueConfiguration({
       accessibilityStatement: {
@@ -39,7 +39,7 @@ import {
     { provide: LOCALE_ID, useValue: "de-CH" },
     provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(config: ObMasterLayoutConfig) {

@@ -1,20 +1,26 @@
 import { provideZoneChangeDetection } from "@angular/core";
 import { platformBrowser } from "@angular/platform-browser";
 import { provideObliqueConfiguration } from "@oblique/oblique";
-import { delay, firstValueFrom, Observable, of } from "rxjs";
+import { type Observable, delay, firstValueFrom, of } from "rxjs";
 import "zone.js";
 
 import { AppModule } from "./app/app.module";
+interface DynamicLocales {
+  locales: string[];
+  defaultLanguage: string;
+  disabled: boolean;
+}
 
-const loadLocalesFromBackend = (): Observable<any> =>
+const loadLocalesFromBackend = (): Observable<DynamicLocales> =>
   of({
     locales: ["de-CH", "en-CH", "es", "fr-CH", "it-CH"],
     defaultLanguage: "de",
     disabled: false,
+  // eslint-disable-next-line @typescript-eslint/no-magic-numbers
   }).pipe(delay(300));
 
 firstValueFrom(loadLocalesFromBackend())
-  .then((locales) =>
+  .then(async (locales) =>
     platformBrowser().bootstrapModule(AppModule, {
       applicationProviders: [
         provideZoneChangeDetection(),
@@ -34,4 +40,4 @@ firstValueFrom(loadLocalesFromBackend())
       ],
     }),
   )
-  .catch((err) => console.error(err));
+  .catch((err: unknown) => console.error(err));

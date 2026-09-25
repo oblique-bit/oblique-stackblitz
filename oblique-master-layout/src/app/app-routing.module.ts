@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { RouterModule, type Routes } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { SubPageComponent } from "./sub-page/sub-page.component";
 

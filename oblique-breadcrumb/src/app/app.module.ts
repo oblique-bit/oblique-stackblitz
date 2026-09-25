@@ -1,11 +1,11 @@
-import { inject, LOCALE_ID, NgModule } from "@angular/core";
+import { LOCALE_ID, NgModule, inject } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import {
-  OB_BANNER,
   ObBreadcrumbModule,
+  ObMasterLayoutConfig,
   ObMasterLayoutModule,
   provideObliqueConfiguration,
 } from "@oblique/oblique";
@@ -14,7 +14,6 @@ import localeDECH from "@angular/common/locales/de-CH";
 import localeFRCH from "@angular/common/locales/fr-CH";
 import localeITCH from "@angular/common/locales/it-CH";
 import { BreadcrumbSampleComponent } from "./breadcrumb-sample/breadcrumb-sample.component";
-import { ObMasterLayoutConfig } from "@oblique/oblique";
 import {
   provideHttpClient,
   withInterceptorsFromDi,
@@ -26,13 +25,13 @@ registerLocaleData(localeFRCH);
 registerLocaleData(localeITCH);
 
 @NgModule({
-  declarations: [AppComponent, BreadcrumbSampleComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ObMasterLayoutModule,
     ObBreadcrumbModule,
   ],
+  declarations: [AppComponent, BreadcrumbSampleComponent],
   providers: [
     provideObliqueConfiguration({
       accessibilityStatement: {
@@ -43,12 +42,12 @@ registerLocaleData(localeITCH);
           "Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern",
         contact: [{ email: "oblique@bit.admin.ch" }],
       },
+      banner: { text: "DEMO" }
     }),
     { provide: LOCALE_ID, useValue: "de-CH" },
-    { provide: OB_BANNER, useValue: { text: "DEMO" } },
     provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor() {
