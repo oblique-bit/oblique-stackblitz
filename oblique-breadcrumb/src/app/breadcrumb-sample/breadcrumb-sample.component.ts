@@ -1,8 +1,8 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 @Component({
-  selector: "breadcrumb-sample",
-  templateUrl: "./breadcrumb-sample.component.html",
-  changeDetection: ChangeDetectionStrategy.Eager,
+  selector: "app-breadcrumb-sample",
   standalone: false,
+  templateUrl: "./breadcrumb-sample.component.html",
+  changeDetection: ChangeDetectionStrategy.Eager
 })
 export class BreadcrumbSampleComponent {}
