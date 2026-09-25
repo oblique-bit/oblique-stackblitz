@@ -1,21 +1,21 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { BreadcrumbSampleComponent } from './breadcrumb-sample/breadcrumb-sample.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { BreadcrumbSampleComponent } from "./breadcrumb-sample/breadcrumb-sample.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'oblique-breadcrumb', pathMatch: 'full' },
+  { path: "", redirectTo: "oblique-breadcrumb", pathMatch: "full" },
   {
-    path: 'oblique-breadcrumb',
+    path: "oblique-breadcrumb",
     component: BreadcrumbSampleComponent,
     children: [
       {
-        path: 'some-page',
+        path: "some-page",
         component: BreadcrumbSampleComponent,
         children: [
           {
-            path: 'some-sub-page',
+            path: "some-sub-page",
             component: BreadcrumbSampleComponent,
-            data: { breadcrumb: 'Sub-Page' },
+            data: { breadcrumb: "Sub-Page" },
           },
         ],
       },
