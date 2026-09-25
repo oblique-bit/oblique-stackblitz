@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    standalone: false
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false,
 })
 export class HomeComponent {}
