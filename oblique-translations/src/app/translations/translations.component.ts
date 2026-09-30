@@ -1,24 +1,24 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import {ChangeDetectionStrategy, Component} from "@angular/core";
 
 @Component({
   selector: "app-translations",
-  templateUrl: "./translations.component.html",
-  styleUrls: ["./translations.component.scss"],
-  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false,
+  templateUrl: "./translations.component.html",
+  styleUrl: "./translations.component.scss",
+  changeDetection: ChangeDetectionStrategy.Eager
 })
 export class TranslationsComponent {
   readonly failedFiles: string = [
-    { name: "Failed file name #1" } as File,
-    { name: "Failed file name #2" } as File,
-    { name: "Failed file name #3" } as File,
+    {name: "Failed file name #1"},
+    {name: "Failed file name #2"},
+    {name: "Failed file name #3"},
   ]
     .map((file) => file.name)
     .join(", ");
   readonly ignoredFiles: string = [
-    { name: "Ignored file name #1" } as File,
-    { name: "Ignored file name #2" } as File,
-    { name: "Ignored file name #3" } as File,
+    {name: "Ignored file name #1"},
+    {name: "Ignored file name #2"},
+    {name: "Ignored file name #3"},
   ]
     .map((file) => file.name)
     .join(", ");
