@@ -1,34 +1,32 @@
-import { inject, LOCALE_ID, NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
+import {LOCALE_ID, NgModule} from "@angular/core";
+import {BrowserModule} from "@angular/platform-browser";
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
+import {AppRoutingModule} from "./app-routing.module";
+import {AppComponent} from "./app.component";
 import {
-  ObMasterLayoutModule,
-  ObUnsavedChangesModule,
   ObAlertModule,
   ObButtonModule,
-  ObMasterLayoutConfig,
+  ObMasterLayoutModule,
+  ObUnsavedChangesModule,
   provideObliqueConfiguration,
 } from "@oblique/oblique";
-import { JsonPipe, registerLocaleData } from "@angular/common";
+import {JsonPipe, registerLocaleData} from "@angular/common";
 import {
   provideHttpClient,
   withInterceptorsFromDi,
   withXhr,
 } from "@angular/common/http";
 import localeENCH from "@angular/common/locales/en-CH";
-import { UnsavedChangesComponent } from "./unsaved-changes/unsaved-changes.component";
-import { OtherPageComponent } from "./other-page/other-page.component";
-import { ReactiveFormsModule } from "@angular/forms";
-import { MatInputModule } from "@angular/material/input";
-import { MatButtonModule } from "@angular/material/button";
-import { MatFormFieldModule } from "@angular/material/form-field";
+import {UnsavedChangesComponent} from "./unsaved-changes/unsaved-changes.component";
+import {OtherPageComponent} from "./other-page/other-page.component";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 registerLocaleData(localeENCH);
 
 @NgModule({
-  declarations: [AppComponent, UnsavedChangesComponent, OtherPageComponent],
   imports: [
     BrowserModule,
     ObUnsavedChangesModule,
@@ -42,6 +40,7 @@ registerLocaleData(localeENCH);
     AppRoutingModule,
     ObMasterLayoutModule,
   ],
+  declarations: [AppComponent, UnsavedChangesComponent, OtherPageComponent],
   providers: [
     provideObliqueConfiguration({
       accessibilityStatement: {
@@ -50,16 +49,12 @@ registerLocaleData(localeENCH);
         applicationName: "Oblique Unsaved Changes example",
         applicationOperator:
           "Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern",
-        contact: [{ email: "oblique@bit.admin.ch" }],
+        contact: [{email: "oblique@bit.admin.ch"}],
       },
     }),
-    { provide: LOCALE_ID, useValue: "en-US" },
+    {provide: LOCALE_ID, useValue: "en-US"},
     provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-  private readonly config = inject(ObMasterLayoutConfig);
-
-  constructor() {}
-}
+export class AppModule {}
