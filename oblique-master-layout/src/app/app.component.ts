@@ -24,6 +24,7 @@ export class AppComponent {
       label: "Removable item",
       url: "menu",
       removable: true,
+      id: "removable-item",
     },
   ];
 }
