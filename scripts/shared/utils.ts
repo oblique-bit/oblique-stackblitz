@@ -20,6 +20,20 @@ export function executeCommandWithLog(command: string, messagePrefix: string, op
 	}
 }
 
+export function executeCommandWithLogWithoutError(command: string, messagePrefix: string, options: ExecSyncOptions = {}): void {
+	Log.info(`${messagePrefix}: ${command}`);
+	try {
+		execSync(command, {...options, stdio: 'inherit'});
+	} catch (rawError) {
+		const error = rawError as {stdout: Buffer; stderr: Buffer};
+		const errorMessage = [error.stdout, error.stderr]
+			.filter(buffer => !!buffer)
+			.map(buffer => buffer.toString())
+			.join('\n');
+		Log.info(errorMessage);
+	}
+}
+
 export function getResultFromCommand(command: string, options?: ExecSyncOptions): string {
 	return execSync(command, options).toString().trim();
 }

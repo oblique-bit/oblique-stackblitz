@@ -1,6 +1,6 @@
 import {StaticScript} from './shared/static-script';
 import {Files} from './shared/files';
-import {executeCommandWithLog, getResultFromCommand} from './shared/utils';
+import {executeCommandWithLog, executeCommandWithLogWithoutError, getResultFromCommand} from './shared/utils';
 import {Log} from './shared/log';
 
 class DependenciesUpdate extends StaticScript {
@@ -40,13 +40,17 @@ class DependenciesUpdate extends StaticScript {
 
     private static updateRegular(project: string): void {
         DependenciesUpdate.execute(`npm update --prefix ./${project} --save --audit false`);
-        DependenciesUpdate.execute(`npm audit fix --prefix ./${project} --audit-level=none`);
+        DependenciesUpdate.execute(`npm audit fix --prefix ./${project} --audit-level=none`, true);
         DependenciesUpdate.execute(`npm dedupe --prefix ./${project} --audit false`);
         DependenciesUpdate.execute(`npm prune --prefix ./${project} --audit false`);
     }
 
-	private static execute(command: string): void {
-		executeCommandWithLog(`${command} --fund false`, `Execute`);
+	private static execute(command: string, ignoreErrors = false): void {
+        if (ignoreErrors) {
+            executeCommandWithLogWithoutError(`${command} --fund false`, `Execute`);
+        } else {
+            executeCommandWithLog(`${command} --fund false`, `Execute`);
+        }
 	}
 
     private static updateProject(version: string): void {
