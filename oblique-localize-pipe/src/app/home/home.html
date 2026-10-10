@@ -1,0 +1,47 @@
+<p>Change the language in the top right corner to see the URL change.</p>
+
+<table class="ob-table">
+	<caption>
+		Examples of localized URLs
+	</caption>
+	<thead>
+		<tr>
+			<th>Input URL</th>
+            <th>Transformed link</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>.</td>
+            <td><a [href]="'.' | obLocalize">{{ "." | obLocalize }}</a></td>
+		</tr>
+		<tr>
+			<td>..</td>
+            <td><a [href]="'..' | obLocalize">{{ ".." | obLocalize }}</a></td>
+		</tr>
+        <tr>
+            <td>/</td>
+            <td><a [href]="'/' | obLocalize">{{ "/" | obLocalize }}</a></td>
+        </tr>
+		<tr>
+			<td>../page</td>
+            <td><a [href]="'../page' | obLocalize">{{ "../page" | obLocalize }}</a></td>
+		</tr>
+		<tr>
+			<td>/de</td>
+            <td><a [href]="'/de' | obLocalize">{{ "/de" | obLocalize }}</a></td>
+		</tr>
+		<tr>
+			<td>/page</td>
+            <td><a [href]="'/page' | obLocalize">{{ "/page" | obLocalize }}</a></td>
+		</tr>
+		<tr>
+			<td>/fr/page</td>
+            <td><a [href]="'/fr/page' | obLocalize">{{ "/fr/page" | obLocalize }}</a></td>
+		</tr>
+		<tr>
+			<td>/it/page</td>
+            <td><a [href]="'/it/page' | obLocalize">{{ "/it/page" | obLocalize }}</a></td>
+		</tr>
+	</tbody>
+</table>
