@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   MatDatepickerInputEvent,
   MatDatepickerModule,
@@ -9,5 +9,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 @Component({
   selector: 'datepicker-sample',
   templateUrl: './datepicker-sample.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DatepickerSampleComponent {}

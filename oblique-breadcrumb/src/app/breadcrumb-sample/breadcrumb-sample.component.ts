@@ -3,6 +3,6 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
   selector: "app-breadcrumb-sample",
   standalone: false,
   templateUrl: "./breadcrumb-sample.component.html",
-  changeDetection: ChangeDetectionStrategy.Eager
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BreadcrumbSampleComponent {}
