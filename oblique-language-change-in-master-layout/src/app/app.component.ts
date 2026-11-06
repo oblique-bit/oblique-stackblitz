@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ObINavigationLink } from '@oblique/oblique';
 import { ObLanguageService } from '@oblique/oblique';
 import { DateAdapter } from '@angular/material/core';
@@ -6,6 +6,7 @@ import { DateAdapter } from '@angular/material/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   topNavigation: ObINavigationLink[] = [

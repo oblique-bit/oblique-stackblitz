@@ -4,6 +4,6 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
   selector: "app-sub-page",
   standalone: false,
   templateUrl: "./sub-page.component.html",
-  changeDetection: ChangeDetectionStrategy.Eager
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SubPageComponent {}

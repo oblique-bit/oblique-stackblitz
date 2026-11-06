@@ -18,6 +18,7 @@ import {
   withInterceptorsFromDi,
   withXhr,
 } from "@angular/common/http";
+import {HomeComponent} from "./home/home.component";
 
 registerLocaleData(localeDECH);
 registerLocaleData(localeFRCH);

@@ -5,7 +5,7 @@ import {ChangeDetectionStrategy, Component} from "@angular/core";
   standalone: false,
   templateUrl: "./translations.component.html",
   styleUrl: "./translations.component.scss",
-  changeDetection: ChangeDetectionStrategy.Eager
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TranslationsComponent {
   readonly failedFiles: string = [

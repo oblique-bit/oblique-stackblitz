@@ -6,7 +6,7 @@ import { TranslateService } from "@ngx-translate/core";
   standalone: false,
   templateUrl: "./translations.component.html",
   styleUrl: "./translations.component.scss",
-  changeDetection: ChangeDetectionStrategy.Eager
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TranslationsComponent {
   currentLang = inject(TranslateService).getCurrentLang();
