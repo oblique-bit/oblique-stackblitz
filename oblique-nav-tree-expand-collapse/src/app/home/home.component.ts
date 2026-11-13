@@ -6,7 +6,7 @@ import { ObNavTreeItemModel } from "@oblique/oblique";
   standalone: false,
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",
-  changeDetection: ChangeDetectionStrategy.Eager
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
   public items: ObNavTreeItemModel[] = [];

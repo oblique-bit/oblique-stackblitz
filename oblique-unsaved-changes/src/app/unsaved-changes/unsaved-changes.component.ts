@@ -5,7 +5,7 @@ import { UntypedFormBuilder, type UntypedFormGroup } from "@angular/forms";
   selector: "app-unsaved-changes",
   standalone: false,
   templateUrl: "./unsaved-changes.component.html",
-  changeDetection: ChangeDetectionStrategy.Eager
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UnsavedChangesComponent {
   form: UntypedFormGroup;
