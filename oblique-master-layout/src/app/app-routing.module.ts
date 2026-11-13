@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, type Routes } from "@angular/router";
+import { type Routes, provideRouter } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { SubPageComponent } from "./sub-page/sub-page.component";
 
@@ -10,7 +10,6 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  providers: [provideRouter(routes)],
 })
 export class AppRoutingModule {}

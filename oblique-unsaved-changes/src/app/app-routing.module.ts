@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, type Routes } from "@angular/router";
+import { type Routes, provideRouter } from "@angular/router";
 import { UnsavedChangesComponent } from "./unsaved-changes/unsaved-changes.component";
 import { OtherPageComponent } from "./other-page/other-page.component";
 import { ObUnsavedChangesGuard } from "@oblique/oblique";
@@ -15,7 +15,6 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  providers: [provideRouter(routes)],
 })
 export class AppRoutingModule {}

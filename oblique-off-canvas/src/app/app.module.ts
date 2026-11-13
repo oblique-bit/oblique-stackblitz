@@ -1,5 +1,5 @@
 import { LOCALE_ID, NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
+import { type Routes, provideRouter } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
 import {
@@ -15,17 +15,13 @@ import {
   withXhr,
 } from "@angular/common/http";
 
+const routes: Routes = [{ path: "", component: OffCanvasContainerComponent }];
+
 @NgModule({
-  imports: [
-    BrowserModule,
-    ObMasterLayoutModule,
-    ObOffCanvasModule,
-    RouterModule.forRoot([
-      { path: "", component: OffCanvasContainerComponent },
-    ]),
-  ],
+  imports: [BrowserModule, ObMasterLayoutModule, ObOffCanvasModule],
   declarations: [AppComponent, OffCanvasContainerComponent],
   providers: [
+    provideRouter(routes),
     provideObliqueConfiguration({
       accessibilityStatement: {
         createdOn: new Date("2025-09-26"),
