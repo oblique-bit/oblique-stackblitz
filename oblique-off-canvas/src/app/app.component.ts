@@ -4,6 +4,6 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
   selector: "app-root",
   standalone: false,
   templateUrl: "./app.component.html",
-  changeDetection: ChangeDetectionStrategy.Eager
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {}

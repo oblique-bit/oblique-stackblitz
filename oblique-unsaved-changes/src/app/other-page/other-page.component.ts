@@ -4,6 +4,6 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
   selector: "app-other-page",
   standalone: false,
   templateUrl: "./other-page.component.html",
-  changeDetection: ChangeDetectionStrategy.Eager
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OtherPageComponent {}
