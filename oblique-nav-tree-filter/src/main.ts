@@ -1,10 +1,9 @@
-import { provideZoneChangeDetection } from "@angular/core";
-import "zone.js";
+import { provideZonelessChangeDetection } from "@angular/core";
 import { platformBrowser } from "@angular/platform-browser";
 import { AppModule } from "./app/app.module";
 
 platformBrowser()
   .bootstrapModule(AppModule, {
-    applicationProviders: [provideZoneChangeDetection()],
+    applicationProviders: [provideZonelessChangeDetection()],
   })
   .catch((err: unknown) => console.error(err));

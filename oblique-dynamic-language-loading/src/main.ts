@@ -1,8 +1,7 @@
-import { provideZoneChangeDetection } from "@angular/core";
+import { provideZonelessChangeDetection } from "@angular/core";
 import { platformBrowser } from "@angular/platform-browser";
 import { provideObliqueConfiguration } from "@oblique/oblique";
 import { type Observable, delay, firstValueFrom, of } from "rxjs";
-import "zone.js";
 
 import { AppModule } from "./app/app.module";
 interface DynamicLocales {
@@ -23,7 +22,7 @@ firstValueFrom(loadLocalesFromBackend())
   .then(async (locales) =>
     platformBrowser().bootstrapModule(AppModule, {
       applicationProviders: [
-        provideZoneChangeDetection(),
+        provideZonelessChangeDetection(),
         provideObliqueConfiguration({
           accessibilityStatement: {
             createdOn: new Date("2025-09-26"),

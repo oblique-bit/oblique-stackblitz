@@ -24,8 +24,7 @@
     "angular-oauth2-oidc": "^22.0.2",
     "jwt-decode": "^4.0.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.9.1",
-    "zone.js": "^0.15.1"
+    "tslib": "^2.9.1"
   },
   "devDependencies": {
     "@angular-builders/jest": "^22.0.1",
