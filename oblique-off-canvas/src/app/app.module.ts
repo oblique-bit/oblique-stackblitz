@@ -1,6 +1,8 @@
 import { LOCALE_ID, NgModule } from "@angular/core";
 import { type Routes, provideRouter } from "@angular/router";
 import { BrowserModule } from "@angular/platform-browser";
+import { registerLocaleData } from "@angular/common";
+import localeENCH from "@angular/common/locales/en-CH";
 import { AppComponent } from "./app.component";
 import {
   ObMasterLayoutConfig,
@@ -14,11 +16,14 @@ import {
   withInterceptorsFromDi,
   withXhr,
 } from "@angular/common/http";
+import { TranslatePipe } from "@ngx-translate/core";
+
+registerLocaleData(localeENCH);
 
 const routes: Routes = [{ path: "", component: OffCanvasContainerComponent }] as const;
 
 @NgModule({
-  imports: [BrowserModule, ObMasterLayoutModule, ObOffCanvasModule],
+  imports: [BrowserModule, ObMasterLayoutModule, ObOffCanvasModule, TranslatePipe],
   declarations: [AppComponent, OffCanvasContainerComponent],
   providers: [
     provideRouter(routes),
@@ -27,12 +32,12 @@ const routes: Routes = [{ path: "", component: OffCanvasContainerComponent }] as
         createdOn: new Date("2025-09-26"),
         conformity: "none",
         applicationName: "Oblique Off Canvas example",
-        applicationOperator:
-          "Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern",
+        applicationOperator: "accessibility-statement.address",
         contact: [{ email: "oblique@bit.admin.ch" }],
       },
+      translate: { locales: { locales: ["en-CH"] } },
     }),
-    { provide: LOCALE_ID, useValue: "de-CH" },
+    { provide: LOCALE_ID, useValue: "en-CH" },
     provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
   bootstrap: [AppComponent]

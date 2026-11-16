@@ -1,4 +1,7 @@
 {
+  "header.title": "Oblique exemple de chargement dynamique des traductions",
+  "footer.copyright": "© 2024 Office fédéral de l'informatique et de la télécommunication OFIT",
+  "accessibility-statement.address": "Office fédéral de l'informatique et de la télécommunication OFIT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern",
   "additional.translation": "Traduction supplémentaire",
   "i18n.common.action": "Action",
   "i18n.oblique.occurrences": "Nombre de notifications : {{occurrences}}",

@@ -1,4 +1,7 @@
 {
+  "header.title": "Oblique Übersetzungsbeispiel",
+  "footer.copyright": "© 2024 Bundesamt für Informatik und Telekommunikation BIT",
+  "accessibility-statement.address": "Bundesamt für Informatik und Telekommunikation BIT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern",
   "additional.translation": "Zusätzliche Übersetzung",
   "i18n.common.action": "Aktion",
   "i18n.oblique.occurrences": "Anzahl Notifikationen: {{occurrences}}",

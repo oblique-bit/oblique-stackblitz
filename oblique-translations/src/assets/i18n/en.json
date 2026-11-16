@@ -1,4 +1,7 @@
 {
+  "header.title": "Oblique Translations example",
+  "footer.copyright": "© 2024 Federal Office of Information Technology, Systems and Telecommunication FOITT",
+  "accessibility-statement.address": "Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern",
   "additional.translation": "Additional translation",
   "i18n.common.action": "Action",
   "i18n.oblique.occurrences": "Number of notifications: {{occurrences}}",

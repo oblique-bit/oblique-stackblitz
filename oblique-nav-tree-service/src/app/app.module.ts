@@ -10,19 +10,16 @@ import {
   provideObliqueConfiguration,
 } from "@oblique/oblique";
 import { AsyncPipe, registerLocaleData } from "@angular/common";
-import localeDECH from "@angular/common/locales/de-CH";
-import localeFRCH from "@angular/common/locales/fr-CH";
-import localeITCH from "@angular/common/locales/it-CH";
+import localeENCH from "@angular/common/locales/en-CH";
 import {
   provideHttpClient,
   withInterceptorsFromDi,
   withXhr,
 } from "@angular/common/http";
 import { HomeComponent } from "./home/home.component";
+import { TranslatePipe } from "@ngx-translate/core";
 
-registerLocaleData(localeDECH);
-registerLocaleData(localeFRCH);
-registerLocaleData(localeITCH);
+registerLocaleData(localeENCH);
 
 @NgModule({
   imports: [
@@ -31,6 +28,7 @@ registerLocaleData(localeITCH);
     ObNavTreeModule,
     ObMasterLayoutModule,
     AsyncPipe,
+    TranslatePipe,
   ],
   declarations: [AppComponent, HomeComponent],
   providers: [
@@ -39,12 +37,12 @@ registerLocaleData(localeITCH);
         createdOn: new Date("2025-09-26"),
         conformity: "none",
         applicationName: "Oblique Nav Tree with data from a service example",
-        applicationOperator:
-          "Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern",
+        applicationOperator: "accessibility-statement.address",
         contact: [{ email: "oblique@bit.admin.ch" }],
       },
+      translate: { locales: { locales: ["en-CH"] } },
     }),
-    { provide: LOCALE_ID, useValue: "de-CH" },
+    { provide: LOCALE_ID, useValue: "en-CH" },
     provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
   bootstrap: [AppComponent]

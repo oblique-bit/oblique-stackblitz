@@ -42,9 +42,8 @@ registerLocaleData(localeITCH);
       accessibilityStatement: {
         createdOn: new Date("2025-09-26"),
         conformity: "none",
-        applicationName: "Oblique Translations example",
-        applicationOperator:
-          "Federal Office of Information Technology, Systems and Telecommunication FOITT<br>Meielen Campus<br>Eichenweg 3<br>CH-3003 Bern",
+        applicationName: "header.title",
+        applicationOperator: "accessibility-statement.address",
         contact: [{ email: "oblique@bit.admin.ch" }],
       },
       translate: {
