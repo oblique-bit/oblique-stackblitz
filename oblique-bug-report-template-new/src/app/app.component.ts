@@ -19,5 +19,5 @@ export class AppComponent {
       label: "With sub nav",
       url: "menu",
     },
-  ];
+  ] as const;
 }

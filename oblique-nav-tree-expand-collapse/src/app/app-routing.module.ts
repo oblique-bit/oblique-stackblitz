@@ -9,7 +9,7 @@ const routes: Routes = [
     pathMatch: "full",
   },
   { path: "oblique-nav-tree-expand-collapse", component: HomeComponent },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

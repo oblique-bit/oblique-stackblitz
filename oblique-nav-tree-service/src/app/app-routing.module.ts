@@ -5,7 +5,7 @@ import { HomeComponent } from "./home/home.component";
 const routes: Routes = [
   { path: "", redirectTo: "oblique-nav-tree-service", pathMatch: "full" },
   { path: "oblique-nav-tree-service", component: HomeComponent },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

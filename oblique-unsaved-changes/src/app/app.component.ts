@@ -10,5 +10,5 @@ export class AppComponent {
   topNavigation: ObINavigationLink[] = [
     { url: "unsaved-changes", label: "Unsaved changes" },
     { url: "other-page", label: "Other page" },
-  ];
+  ] as const;
 }

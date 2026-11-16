@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: "", redirectTo: "oblique-master-layout", pathMatch: "full" },
   { path: "oblique-master-layout", component: HomeComponent },
   { path: "menu/sub1", component: SubPageComponent },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

@@ -21,7 +21,7 @@ const routes: Routes = [
       },
     ],
   },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

@@ -5,7 +5,7 @@ import { HomeComponent } from "./home/home.component";
 const routes: Routes = [
   { path: "", redirectTo: "oblique-date-component", pathMatch: "full" },
   { path: "oblique-date-component", component: HomeComponent },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

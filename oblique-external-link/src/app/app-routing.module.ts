@@ -5,7 +5,7 @@ import { HomeComponent } from "./home/home.component";
 const routes: Routes = [
   { path: "", redirectTo: "oblique-external-link", pathMatch: "full" },
   { path: "oblique-external-link", component: HomeComponent },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

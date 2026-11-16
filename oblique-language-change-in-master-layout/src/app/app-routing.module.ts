@@ -5,7 +5,7 @@ import { DatepickerSampleComponent } from './datepicker-sample/datepicker-sample
 const routes: Routes = [
   { path: '', redirectTo: 'datepicker-sample', pathMatch: 'full' },
   { path: 'datepicker-sample', component: DatepickerSampleComponent },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   { path: "oblique-bug-report-template-new", component: HomeComponent },
   { path: "menu/sub1", component: SubPageComponent },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

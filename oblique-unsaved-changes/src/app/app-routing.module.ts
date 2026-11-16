@@ -12,7 +12,7 @@ const routes: Routes = [
     canDeactivate: [ObUnsavedChangesGuard],
   },
   { path: "other-page", component: OtherPageComponent },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

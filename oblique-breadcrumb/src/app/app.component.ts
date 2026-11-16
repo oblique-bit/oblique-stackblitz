@@ -19,5 +19,5 @@ export class AppComponent {
       label: "Some page",
       url: "oblique-breadcrumb/some-page",
     },
-  ];
+  ] as const;
 }

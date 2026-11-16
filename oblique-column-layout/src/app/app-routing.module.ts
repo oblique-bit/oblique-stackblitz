@@ -5,7 +5,7 @@ import { HomeComponent } from "./home/home.component";
 const routes: Routes = [
   { path: "", redirectTo: "oblique-column-layout", pathMatch: "full" },
   { path: "oblique-column-layout", component: HomeComponent },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

@@ -15,7 +15,7 @@ import {
   withXhr,
 } from "@angular/common/http";
 
-const routes: Routes = [{ path: "", component: OffCanvasContainerComponent }];
+const routes: Routes = [{ path: "", component: OffCanvasContainerComponent }] as const;
 
 @NgModule({
   imports: [BrowserModule, ObMasterLayoutModule, ObOffCanvasModule],

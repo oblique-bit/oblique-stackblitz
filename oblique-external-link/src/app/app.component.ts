@@ -9,5 +9,5 @@ import type { ObINavigationLink } from "@oblique/oblique";
 export class AppComponent {
   topNavigation: ObINavigationLink[] = [
     { url: "oblique-external-link", label: "Home" },
-  ];
+  ] as const;
 }

@@ -12,7 +12,7 @@ const routes: Routes = [
     path: "oblique-language-change-on-date-pipe-example",
     component: HomeComponent,
   },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

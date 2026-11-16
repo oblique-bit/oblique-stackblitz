@@ -6,7 +6,7 @@ const routes: Routes = [
   { path: "", redirectTo: "oblique-unknown-route-example", pathMatch: "full" },
   { path: "oblique-unknown-route-example", component: HomeComponent },
   { path: "**", redirectTo: "unknown-route" },
-];
+] as const;
 
 @NgModule({
   providers: [provideRouter(routes)],

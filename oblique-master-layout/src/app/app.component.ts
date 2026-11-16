@@ -25,5 +25,5 @@ export class AppComponent {
       removable: true,
       id: "removable-item",
     },
-  ];
+  ] as const;
 }

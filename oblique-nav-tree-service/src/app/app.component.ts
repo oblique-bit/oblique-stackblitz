@@ -9,5 +9,5 @@ import type { ObINavigationLink } from "@oblique/oblique";
 export class AppComponent {
   topNavigation: ObINavigationLink[] = [
     { url: "oblique-nav-tree-service", label: "Home" },
-  ];
+  ] as const;
 }

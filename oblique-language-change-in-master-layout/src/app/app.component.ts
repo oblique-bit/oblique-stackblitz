@@ -10,7 +10,7 @@ import { DateAdapter } from '@angular/material/core';
 export class AppComponent {
   topNavigation: ObINavigationLink[] = [
     { url: 'datepicker-sample', label: 'Datepicker' },
-  ];
+  ] as const;
   constructor(
     adapter: DateAdapter<any>,
 		language: ObLanguageService) {
