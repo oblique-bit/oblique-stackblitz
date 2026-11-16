@@ -16,7 +16,6 @@ import {
   withXhr,
 } from "@angular/common/http";
 import { HomeComponent } from "./home/home.component";
-import { SubPageComponent } from "./sub-page/sub-page.component";
 import { TranslatePipe } from "@ngx-translate/core";
 
 registerLocaleData(localeENCH);
@@ -28,7 +27,7 @@ registerLocaleData(localeENCH);
     ObMasterLayoutModule,
     TranslatePipe,
   ],
-  declarations: [AppComponent, HomeComponent, SubPageComponent],
+  declarations: [AppComponent, HomeComponent],
   providers: [
     provideObliqueConfiguration({
       accessibilityStatement: {

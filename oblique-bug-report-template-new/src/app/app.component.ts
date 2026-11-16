@@ -9,15 +9,5 @@ import type { ObINavigationLink } from "@oblique/oblique";
 export class AppComponent {
   topNavigation: ObINavigationLink[] = [
     { url: "oblique-bug-report-template-new", label: "Home" },
-    {
-      children: [
-        {
-          label: "Sub page",
-          url: "sub1",
-        },
-      ],
-      label: "With sub nav",
-      url: "menu",
-    },
   ] as const;
 }
