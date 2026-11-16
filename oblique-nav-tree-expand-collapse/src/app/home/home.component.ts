@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, type OnInit } from "@angular/core";
+import { Component, type OnInit } from "@angular/core";
 import { ObNavTreeItemModel } from "@oblique/oblique";
 
 @Component({
@@ -6,7 +6,6 @@ import { ObNavTreeItemModel } from "@oblique/oblique";
   standalone: false,
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
   public items: ObNavTreeItemModel[] = [];

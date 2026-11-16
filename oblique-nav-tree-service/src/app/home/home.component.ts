@@ -1,5 +1,4 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   inject,
 } from "@angular/core";
@@ -11,7 +10,6 @@ import {DataService} from "./data.service";
   selector: "app-home",
   standalone: false,
   templateUrl: "./home.component.html",
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
   items$: Observable<ObNavTreeItemModel[]>;
