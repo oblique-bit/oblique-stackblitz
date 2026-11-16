@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter",
+  "name": "oblique-unsaved-changes",
   "private": true,
   "scripts": {
     "start": "ng serve",

@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter",
+  "name": "oblique-nav-tree-expand-collapse",
   "private": true,
   "scripts": {
     "start": "ng serve",

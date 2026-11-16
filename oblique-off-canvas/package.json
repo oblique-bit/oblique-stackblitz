@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter",
+  "name": "oblique-off-canvas",
   "private": true,
   "scripts": {
     "start": "ng serve",

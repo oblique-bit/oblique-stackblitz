@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter",
+  "name": "oblique-language-change-on-date-pipe-example",
   "private": true,
   "scripts": {
     "start": "ng serve",

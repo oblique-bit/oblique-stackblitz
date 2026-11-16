@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter",
+  "name": "oblique-translations",
   "private": true,
   "scripts": {
     "start": "ng serve",

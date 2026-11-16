@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter",
+  "name": "oblique-external-link",
   "private": true,
   "scripts": {
     "start": "ng serve",
