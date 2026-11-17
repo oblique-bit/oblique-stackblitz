@@ -8,6 +8,6 @@ import type { ObINavigationLink } from "@oblique/oblique";
 })
 export class AppComponent {
   topNavigation: ObINavigationLink[] = [
-    { url: "oblique-bug-report-template-new", label: "Home" },
+    { url: "oblique-bug-report-template-new", label: "Bug report" },
   ] as const;
 }
