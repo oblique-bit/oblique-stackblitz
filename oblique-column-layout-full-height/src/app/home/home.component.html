@@ -1,0 +1,32 @@
+<ob-column-layout class="ob-full-height">
+  <ng-container column-left-content>
+    <p><strong>Left column</strong></p>
+    <p>Navigation or filters can be placed here.</p>
+    <ul>
+      @for (block of visibleBlocks(); track block) {
+        <li>Navigation item {{ block }}</li>
+      }
+    </ul>
+  </ng-container>
+
+  <ng-container column-main-content>
+    <h1>Column layout (full height)</h1>
+    <p>The primary content of the page can be placed here.</p>
+    <p>
+      <mat-slide-toggle [(ngModel)]="showMore">
+        Add content to make each column overflow and show its own scrollbar.
+      </mat-slide-toggle>
+    </p>
+    @for (block of visibleBlocks(); track block) {
+      <p>Main content block {{ block }}.</p>
+    }
+  </ng-container>
+
+  <ng-container column-right-content>
+    <p><strong>Right column</strong></p>
+    <p>Contextual information or actions can be placed here.</p>
+    @for (block of visibleBlocks(); track block) {
+      <p>Additional information {{ block }}.</p>
+    }
+  </ng-container>
+</ob-column-layout>

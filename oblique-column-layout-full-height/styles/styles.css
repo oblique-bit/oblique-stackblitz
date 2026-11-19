@@ -1,0 +1,4 @@
+.ob-fixed-scroll-wrapper > .ob-main-layout {
+  height: 100%;
+  box-sizing: border-box;
+}
