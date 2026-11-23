@@ -1,0 +1,59 @@
+{
+  "name": "angular-starter",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "lint": "ng lint",
+    "format": "npm run lint -- --fix"
+  },
+  "dependencies": {
+    "@angular/animations": "^22.1.7",
+    "@angular/cdk": "^22.1.7",
+    "@angular/common": "^22.1.7",
+    "@angular/compiler": "^22.1.7",
+    "@angular/core": "^22.1.7",
+    "@angular/forms": "^22.1.7",
+    "@angular/material": "^22.1.7",
+    "@angular/platform-browser": "^22.1.7",
+    "@angular/platform-browser-dynamic": "^22.1.7",
+    "@angular/router": "^22.1.7",
+    "@ngx-translate/core": "^18.0.0",
+    "@oblique/oblique": "^16.0.5",
+    "@popperjs/core": "^2.11.8",
+    "angular-oauth2-oidc": "^22.0.2",
+    "jwt-decode": "^4.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "^0.15.1"
+  },
+  "devDependencies": {
+    "@angular-builders/jest": "^22.0.1",
+    "@angular-devkit/build-angular": "^22.1.8",
+    "@angular/cli": "^22.1.8",
+    "@angular/compiler-cli": "^22.1.7",
+    "@eslint/js": "^10.0.1",
+    "@oblique/toolchain": "^16.0.0",
+    "@schematics/angular": "^22.1.8",
+    "@types/jest": "^30.0.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "angular-eslint": "22.5.0",
+    "eslint": "^10.9.1",
+    "husky": "^9.1.7",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
+    "jest-sonar-reporter": "^2.0.0",
+    "prettier": "^3.9.8",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "8.69.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "@parcel/watcher@2.6.0": true,
+    "lmdb@3.5.1": true,
+    "msgpackr-extract@3.0.4": true,
+    "unrs-resolver@1.12.2": true
+  }
+}
