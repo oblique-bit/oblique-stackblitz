@@ -1,61 +1,88 @@
-<h2 class="page-header">ObDateComponent</h2>
-<table class="ob-table">
-	<thead>
-		<tr>
-			<th scope="col">Format</th>
-			<th scope="col">Input</th>
-			<th scope="col">Example</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row" data-title="FORMAT">shortDate</th>
-			<td data-title="INPUT">2025-05-12</td>
-			<td data-title="EXAMPLE">
-				<ob-date date="2025-05-12" format="longDate" />
-			</td>
-		</tr>
-		<tr>
-			<th scope="row" data-title="FORMAT">mediumDate</th>
-			<td data-title="INPUT">2025-05-12</td>
-			<td data-title="EXAMPLE">
-				<ob-date date="2025-05-12" format="mediumDate" />
-			</td>
-		</tr>
-		<tr>
-			<th scope="row" data-title="FORMAT">longDate</th>
-			<td data-title="INPUT">2025-05-12</td>
-			<td data-title="EXAMPLE">
-				<ob-date date="2025-05-12" format="longDate" />
-			</td>
-		</tr>
-		<tr>
-			<th scope="row" data-title="FORMAT">fullDate</th>
-			<td data-title="INPUT">2025-05-12</td>
-			<td data-title="EXAMPLE">
-				<ob-date date="2025-05-12" format="longDate" />
-			</td>
-		</tr>
-		<tr>
-			<th scope="row" data-title="FORMAT">isoDate</th>
-			<td data-title="INPUT">2025-05-12</td>
-			<td data-title="EXAMPLE">
-				<ob-date date="2025-05-12" format="isoDate" />
-			</td>
-		</tr>
-		<tr>
-			<th scope="row" data-title="FORMAT">default</th>
-			<td data-title="INPUT">new Date('2025-05-12')</td>
-			<td data-title="EXAMPLE">
-				<ob-date [date]="exampleDate" />
-			</td>
-		</tr>
-		<tr>
-			<th scope="row" data-title="FORMAT">default</th>
-			<td data-title="INPUT">31.12.2025</td>
-			<td data-title="EXAMPLE">
-				<ob-date date="31.12.2025" />
-			</td>
-		</tr>
-	</tbody>
-</table>
+<h1>Date</h1>
+<p>
+    This example shows <code>ObDateComponent</code>, which renders a date or a time in an accessible way following the given
+    <code>format</code> and <code>timeFormat</code> inputs. The result follows locale preferences expressed by the language
+    selected in the top right corner but always renders the day before the month (except for <code>isoDate</code>). The
+    explanations are intentionally left in English to keep the example simple and let you focus on the real purpose: the date
+    formats.
+</p>
+
+<section>
+    <h2>Formats</h2>
+    <p>Below is the complete collection of supported date and time formats, using <code>{{isoDate()}}</code> as input. The
+    date input is given in UTC, but the component always renders in <code>Europe/Zurich</code>.</p>
+
+    <table class="ob-table">
+        <thead>
+            <tr>
+                <th>Date format</th>
+                <th [attr.colspan]="timeFormats().length + 1">Time formats</th>
+            </tr>
+            <tr>
+                <td></td>
+                <th>None</th>
+                @for (timeFormat of timeFormats(); track timeFormat) {
+                    <th><code>{{timeFormat}}</code></th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>None</th>
+                <td><ob-date [date]="isoDate()"/></td>
+                @for (timeFormat of timeFormats(); track timeFormat) {
+                    <td><ob-date [timeFormat]="timeFormat" [date]="isoDate()"/></td>
+                }
+            </tr>
+            @for (dateFormat of dateFormats(); track dateFormat) {
+                <tr>
+                    <th><code>{{dateFormat}}</code></th>
+                    <td><ob-date [format]="dateFormat" [date]="isoDate()"/></td>
+                    @for (timeFormat of timeFormats(); track timeFormat) {
+                        <td><ob-date [timeFormat]="timeFormat" [format]="dateFormat" [date]="isoDate()"/></td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+<section>
+    <h2>Accepted date input</h2>
+
+    <p>
+        The <code>date</code> input accepts an ISO or Swiss date string, a <code>Date</code> object, or a timestamp. All
+        examples below use the default format.
+    </p>
+
+    <table class="ob-table">
+        <thead>
+            <tr>
+                <th scope="col">Input</th>
+                <th scope="col">Value</th>
+                <th scope="col">Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>ISO date</th>
+                <td><code>{{isoDate()}}</code></td>
+                <td><ob-date [date]="isoDate()" /></td>
+            </tr>
+            <tr>
+                <th>Swiss date</th>
+                <td><code>{{swissDate()}}</code></td>
+                <td><ob-date [date]="swissDate()" /></td>
+            </tr>
+            <tr>
+                <th><code>Date</code> object</th>
+                <td><code>new Date('{{isoDate()}}')</code></td>
+                <td><ob-date [date]="dateObject()" /></td>
+            </tr>
+            <tr>
+                <th>Timestamp</th>
+                <td><code>{{timestamp()}}</code></td>
+                <td><ob-date [date]="timestamp()" /></td>
+            </tr>
+        </tbody>
+    </table>
+</section>

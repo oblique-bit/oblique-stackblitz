@@ -1,0 +1,10 @@
+@use "@oblique/oblique/styles/scss/core/variables";
+
+th code {
+  text-transform: initial;
+  white-space: nowrap;
+}
+
+section + section {
+  margin-top: variables.$ob-spacing-default;
+}
